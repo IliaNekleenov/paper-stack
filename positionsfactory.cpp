@@ -2,7 +2,7 @@
 
 std::shared_ptr<PositionedPaperObject> PositionsFactory::fromJsonObject(const QJsonObject &jsonObject) {
     std::shared_ptr<PositionedPaperObject> result;
-    auto type = static_cast<PositionedElementType>(jsonObject.value("type").toInt());
+    auto type = static_cast<PositionedPaperObjectType>(jsonObject.value("type").toInt());
     switch (type) {
     case PAPER_SHEET: {
         auto paper = std::make_shared<PaperSheet>();

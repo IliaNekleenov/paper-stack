@@ -47,8 +47,8 @@ QString PaperSheet::description() const {
     return PositionedPaperObject::description() + ", width=" + QString::number(width) + ", height=" + QString::number(height);
 }
 
-PositionedElementType PaperSheet::getType() const {
-    return PositionedElementType::PAPER_SHEET;
+PositionedPaperObjectType PaperSheet::getType() const {
+    return PositionedPaperObjectType::PAPER_SHEET;
 }
 
 QString PaperSheet::getStringType() const {

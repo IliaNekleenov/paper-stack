@@ -3,7 +3,7 @@
 
 #include <QJsonObject>
 
-enum PositionedElementType {
+enum PositionedPaperObjectType {
     PAPER_SHEET = 0, PAPER_PLATE = 1
 };
 
@@ -28,7 +28,7 @@ public:
 
     virtual QString description() const;
     virtual ~PositionedPaperObject() {}
-    virtual PositionedElementType getType() const = 0;
+    virtual PositionedPaperObjectType getType() const = 0;
     virtual QString getStringType() const = 0;
     virtual QJsonObject toJsonObject() const;
     virtual double calculateVolume() const = 0;

@@ -37,8 +37,8 @@ QString PaperPlate::description() const {
     return PositionedPaperObject::description() + ", radius=" + QString::number(radius);
 }
 
-PositionedElementType PaperPlate::getType() const {
-    return PositionedElementType::PAPER_PLATE;
+PositionedPaperObjectType PaperPlate::getType() const {
+    return PositionedPaperObjectType::PAPER_PLATE;
 }
 
 QString PaperPlate::getStringType() const {

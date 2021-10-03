@@ -88,6 +88,7 @@ void MainWindow::loadStackFromFile() {
         stackView->addItem(iterator->getValue()->description());
         iterator = iterator->lowerElement();
     }
+    onStackContentsChanged();
 }
 
 void MainWindow::saveStackToFile() {

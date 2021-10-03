@@ -23,7 +23,7 @@ public:
     bool operator!=(const PaperSheet& rhs);
 
     QString description() const override;
-    PositionedElementType getType() const override;
+    PositionedPaperObjectType getType() const override;
     QString getStringType() const override;
     QJsonObject toJsonObject() const override;
     double calculateVolume() const override;

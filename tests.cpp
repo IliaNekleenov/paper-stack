@@ -16,7 +16,7 @@ void assertDoubleEquals(double expected, double actual) {
 
 void testPaperSheetDefaultConstructor() {
     PaperSheet defaultPaper;
-    assert(defaultPaper.getType() == PositionedElementType::PAPER_SHEET);
+    assert(defaultPaper.getType() == PositionedPaperObjectType::PAPER_SHEET);
     assertDoubleEquals(0, defaultPaper.getX());
     assertDoubleEquals(0, defaultPaper.getY());
     assertDoubleEquals(0.01, defaultPaper.getThickness());
@@ -26,7 +26,7 @@ void testPaperSheetDefaultConstructor() {
 
 void testPaperSheetParametrizedConstructor(double x, double y, double thickness, double width, double height) {
     PaperSheet initializedPaper(x, y, thickness, width, height);
-    assert(initializedPaper.getType() == PositionedElementType::PAPER_SHEET);
+    assert(initializedPaper.getType() == PositionedPaperObjectType::PAPER_SHEET);
     assertDoubleEquals(x, initializedPaper.getX());
     assertDoubleEquals(y, initializedPaper.getY());
     assertDoubleEquals(thickness, initializedPaper.getThickness());
@@ -37,7 +37,7 @@ void testPaperSheetParametrizedConstructor(double x, double y, double thickness,
 void testPaperSheetCopyConstructor(double x, double y, double thickness, double width, double height) {
     PaperSheet paper(x, y, thickness, width, height);
     PaperSheet copy(paper);
-    assert(copy.getType() == PositionedElementType::PAPER_SHEET);
+    assert(copy.getType() == PositionedPaperObjectType::PAPER_SHEET);
     assertDoubleEquals(x, copy.getX());
     assertDoubleEquals(y, copy.getY());
     assertDoubleEquals(thickness, copy.getThickness());
@@ -77,7 +77,7 @@ void testPaperSheetClass() {
 
 void testPaperPlateDefaultConstructor() {
     PaperPlate defaultPlate;
-    assert(defaultPlate.getType() == PositionedElementType::PAPER_PLATE);
+    assert(defaultPlate.getType() == PositionedPaperObjectType::PAPER_PLATE);
     assertDoubleEquals(0, defaultPlate.getX());
     assertDoubleEquals(0, defaultPlate.getY());
     assertDoubleEquals(1, defaultPlate.getThickness());
@@ -86,7 +86,7 @@ void testPaperPlateDefaultConstructor() {
 
 void testPaperPlateParametrizedConstructor(double x, double y, double thickness, double radius) {
     PaperPlate initializedPlate(x, y, thickness, radius);
-    assert(initializedPlate.getType() == PositionedElementType::PAPER_PLATE);
+    assert(initializedPlate.getType() == PositionedPaperObjectType::PAPER_PLATE);
     assertDoubleEquals(x, initializedPlate.getX());
     assertDoubleEquals(y, initializedPlate.getY());
     assertDoubleEquals(thickness, initializedPlate.getThickness());
@@ -96,7 +96,7 @@ void testPaperPlateParametrizedConstructor(double x, double y, double thickness,
 void testPaperPlateCopyConstructor(double x, double y, double thickness, double radius) {
     PaperPlate plate(x, y, thickness, radius);
     PaperPlate copy(plate);
-    assert(copy.getType() == PositionedElementType::PAPER_PLATE);
+    assert(copy.getType() == PositionedPaperObjectType::PAPER_PLATE);
     assertDoubleEquals(x, copy.getX());
     assertDoubleEquals(y, copy.getY());
     assertDoubleEquals(thickness, copy.getThickness());
